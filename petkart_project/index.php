@@ -94,6 +94,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   <div class="dropdown-content">
     <a href="admin\index.php">Admin</a>
     <a href="seller\index.php">Seller</a>
+	<a href="trainer\index.html">Trainer</a>
     
   </div>
 </div>

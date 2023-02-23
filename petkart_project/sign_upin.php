@@ -98,17 +98,13 @@
 						<div class="modal-body modal-body-sub_agile">
 						<div class="col-md-8 modal_body_left modal_body_left1">
 						<h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
-						 <form  method="post">
+						 <form  method="post" autocomplete="off">
 							<div class="styled-input agile-styled-input-top">
 								<input type="text" name="Name" required="">
 								<label>Name</label>
 								<span></span>
 							</div>
-							<div class="styled-input agile-styled-input-top">
-								<input type="text" name="Phone" required="">
-								<label>Phone</label>
-								<span></span>
-							</div>
+							
 							<div class="styled-input">
 								<input type="email" name="Email" required=""> 
 								<label>Email</label>
@@ -163,7 +159,7 @@
 			if($password==$confirm_password){
 
 			extract($_REQUEST);
-			$n=iud("INSERT INTO `user_reg`( `name`,'phone', `email`, `password`) VALUES ('$Name','$Phone','$Email','$password')");
+			$n=iud("INSERT INTO `user_reg`( `name`, `email`, `password`) VALUES ('$Name','$Email','$password')");
 			if($n==1)
 			{
 				echo'<script>alert("Signup Successful")</script>';

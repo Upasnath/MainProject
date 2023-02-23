@@ -8,7 +8,7 @@
             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
 			<?php
 			
-*/	?>
+	?>
 <i class="fa fa-bell-o"></i>
                 <span class="badge bg-warning"></span>
             </a>
