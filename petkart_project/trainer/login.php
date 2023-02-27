@@ -46,7 +46,7 @@
         $email=$_POST['useremail'];
         $password=$_POST['userpassword'];
         
-        $error='<label for="promter" class="form-label" autocomplete="off" ></label>';
+        $error='<label for="promter" class="form-label"  ></label>';
 
         $result= $database->query("select * from webuser where email='$email'");
         if($result->num_rows==1){

@@ -55,7 +55,7 @@
                                 </td>
                                 <td style="padding:0px;margin:0px;">
                                     <p class="profile-title">Administrator</p>
-                                    <p class="profile-subtitle">admin@edoc.com</p>
+                                    <p class="profile-subtitle">admin@gmail.com</p>
                                 </td>
                             </tr>
                             <tr>
@@ -158,6 +158,7 @@
                 </tr>
                 <tr>
                     <td colspan="4" style="padding-top:10px;">
+                    
                         <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All trainer (<?php echo $list11->num_rows; ?>)</p>
                     </td>
                     

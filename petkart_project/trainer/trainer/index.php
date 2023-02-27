@@ -33,11 +33,11 @@
 
     session_start();
 
-    if(isset($_SESSION["users"])){
-        if(($_SESSION["users"])=="" or $_SESSION['userstype']!='d'){
+    if(isset($_SESSION["user"])){
+        if(($_SESSION["user"])=="" or $_SESSION['usertype']!='d'){
             header("location: ../login.php");
         }else{
-            $usersemail=$_SESSION["users"];
+            $useremail=$_SESSION["user"];
         }
 
     }else{
@@ -47,14 +47,14 @@
 
     //import database
     include("../connection.php");
-    $usersrow = $database->query("select * from trainer where docemail='$usersemail'");
-    $usersfetch=$usersrow->fetch_assoc();
-    $usersid= $usersfetch["docid"];
-    $usersname=$usersfetch["docname"];
+    $userrow = $database->query("select * from trainer where docemail='$useremail'");
+    $userfetch=$userrow->fetch_assoc();
+    $userid= $userfetch["docid"];
+    $username=$userfetch["docname"];
 
 
-    //echo $usersid;
-    //echo $usersname;
+    //echo $userid;
+    //echo $username;
     
     ?>
     <div class="container">
@@ -65,11 +65,11 @@
                         <table border="0" class="profile-container">
                             <tr>
                                 <td width="30%" style="padding-left:20px" >
-                                    <img src="../img/users.png" alt="" width="100%" style="border-radius:50%">
+                                    <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
                                 </td>
                                 <td style="padding:0px;margin:0px;">
-                                    <p class="profile-title"><?php echo substr($usersname,0,13)  ?>..</p>
-                                    <p class="profile-subtitle"><?php echo substr($usersemail,0,22)  ?></p>
+                                    <p class="profile-title"><?php echo substr($username,0,13)  ?>..</p>
+                                    <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
                                 </td>
                             </tr>
                             <tr>
@@ -97,15 +97,9 @@
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-user">
-                        <a href="user.php" class="non-style-link-menu"><div><p class="menu-text">My user</p></a></div>
+                    <td class="menu-btn menu-icon-users">
+                        <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">My users</p></a></div>
                     </td>
-                    <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-settings">
-                        <a href="petkart_project\build-live-chat-system-with-ajax-php-mysql-demo\index.php" class="non-style-link-menu"><div><p class="menu-text">Chat</p></a></div>
-                    </td>
-                </tr>
-                
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings">
@@ -139,7 +133,7 @@
                                 echo $today;
 
 
-                                $userrow = $database->query("select  * from  users;");
+                                $usersrow = $database->query("select  * from  users;");
                                 $trainerrow = $database->query("select  * from  trainer;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
@@ -162,9 +156,9 @@
                     <tr>
                         <td >
                             <h3>Welcome!</h3>
-                            <h1><?php echo $usersname  ?>.</h1>
+                            <h1><?php echo $username  ?>.</h1>
                             <p>Thanks for joinnig with us. We are always trying to get you a complete service<br>
-                            You can view your dailly schedule, Reach user Appointment at home!<br><br>
+                            You can view your dailly schedule, Reach users Appointment at home!<br><br>
                             </p>
                             <a href="appointment.php" class="non-style-link"><button class="btn-primary btn" style="width:30%">View My Appointments</button></a>
                             <br>
@@ -202,23 +196,23 @@
                                                                     <?php    echo $trainerrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
-                                                                    All trainer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    All trainers &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/trainer-hover.svg');"></div>
+                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/trainers-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 <td style="width: 25%;">
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $userrow->num_rows  ?>
+                                                                    <?php    echo $usersrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
-                                                                    All user &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    All users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/user-hover.svg');"></div>
+                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/users-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 </tr>
