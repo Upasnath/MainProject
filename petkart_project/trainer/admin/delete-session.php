@@ -16,8 +16,7 @@
         //import database
         include("../connection.php");
         $id=$_GET["id"];
-        //$result001= $database->query("select * from schedule where scheduleid=$id;");
-        //$email=($result001->fetch_assoc())["docemail"];
+        
         $sql= $database->query("delete from schedule where scheduleid='$id';");
        
         header("location: schedule.php");

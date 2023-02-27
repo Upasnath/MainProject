@@ -34,13 +34,10 @@
             echo $id2."jdfjdfdh";
             if($id2!=$id){
                 $error='1';
-                //$resultqq1= $database->query("select * from trainer where docemail='$email';");
-                //$did= $resultqq1->fetch_assoc()["docid"];
-                //if($resultqq1->num_rows==1){
+              
                     
             }else{
 
-                //$sql1="insert into trainer(docemail,docname,docpassword,docnic,doctel,specialties) values('$email','$name','$password','$nic','$tele',$spec);";
                 $sql1="update trainer set docemail='$email',docname='$name',docpassword='$password',docnic='$nic',doctel='$tele',specialties=$spec where docid=$id ;";
                 $database->query($sql1);
                 

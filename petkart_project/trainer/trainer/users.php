@@ -89,8 +89,8 @@
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td class="menu-btn menu-icon-doctor">
-                        <a href="doctors.php" class="non-style-link-menu"><div><p class="menu-text">All Doctors</p></a></div>
+                    <td class="menu-btn menu-icon-trainer">
+                        <a href="trainers.php" class="non-style-link-menu"><div><p class="menu-text">All trainers</p></a></div>
                     </td>
                 </tr>
                 
@@ -137,7 +137,7 @@
 
 
                                 $userrow = $database->query("select  * from  users;");
-                                $doctorrow = $database->query("select  * from  doctor;");
+                                $trainerrow = $database->query("select  * from  trainer;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
 
@@ -155,25 +155,25 @@
                     <td colspan="4" >
                         
                     <center>
-                    <table class="filter-container doctor-header users-header" style="border: none;width:95%" border="0" >
+                    <table class="filter-container trainer-header users-header" style="border: none;width:95%" border="0" >
                     <tr>
                         <td >
                             <h3>Welcome!</h3>
                             <h1><?php echo $username  ?>.</h1>
-                            <p>Haven't any idea about doctors? no problem let's jumping to 
-                                <a href="doctors.php" class="non-style-link"><b>"All Doctors"</b></a> section or 
+                            <p>Haven't any idea about trainers? no problem let's jumping to 
+                                <a href="trainers.php" class="non-style-link"><b>"All trainers"</b></a> section or 
                                 <a href="schedule.php" class="non-style-link"><b>"Sessions"</b> </a><br>
-                                Track your past and future appointments history.<br>Also find out the expected arrival time of your doctor or medical consultant.<br><br>
+                                Track your past and future appointments history.<br>Also find out the expected arrival time of your trainer or medical consultant.<br><br>
                             </p>
                             
-                            <h3>Channel a Doctor Here</h3>
+                            <h3>Channel a trainer Here</h3>
                             <form action="schedule.php" method="post" style="display: flex">
 
-                                <input type="search" name="search" class="input-text " placeholder="Search Doctor and We will Find The Session Available" list="doctors" style="width:45%;">&nbsp;&nbsp;
+                                <input type="search" name="search" class="input-text " placeholder="Search trainer and We will Find The Session Available" list="trainers" style="width:45%;">&nbsp;&nbsp;
                                 
                                 <?php
-                                    echo '<datalist id="doctors">';
-                                    $list11 = $database->query("select  docname,docemail from  doctor;");
+                                    echo '<datalist id="trainers">';
+                                    $list11 = $database->query("select  docname,docemail from  trainer;");
     
                                     for ($y=0;$y<$list11->num_rows;$y++){
                                         $row00=$list11->fetch_assoc();
@@ -222,13 +222,13 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $doctorrow->num_rows  ?>
+                                                                    <?php    echo $trainerrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
-                                                                    All Doctors &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    All trainers &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
+                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/trainers-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 <td style="width: 25%;">
@@ -312,7 +312,7 @@
                                                 </th>
                                                 
                                                 <th class="table-headin">
-                                                    Doctor
+                                                    Trainer
                                                 </th>
                                                 <th class="table-headin">
                                                     
@@ -326,7 +326,7 @@
                                         
                                             <?php
                                             $nextweek=date("Y-m-d",strtotime("+1 week"));
-                                                $sqlmain= "select * from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join users on users.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  where  users.pid=$userid  and schedule.scheduledate>='$today' order by schedule.scheduledate asc";
+                                                $sqlmain= "select * from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join users on users.pid=appointment.pid inner join trainer on schedule.docid=trainer.docid  where  users.pid=$userid  and schedule.scheduledate>='$today' order by schedule.scheduledate asc";
                                                 //echo $sqlmain;
                                                 $result= $database->query($sqlmain);
                 
@@ -339,7 +339,7 @@
                                                     
                                                     <br>
                                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nothing to show here!</p>
-                                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Channel a Doctor &nbsp;</font></button>
+                                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Channel a trainer &nbsp;</font></button>
                                                     </a>
                                                     </center>
                                                     <br><br><br><br>

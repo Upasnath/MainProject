@@ -115,11 +115,7 @@
                     <td class="menu-btn menu-icon-appoinment">
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Bookings</p></a></div>
                     </td>
-                    <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-settings">
-                        <a href="D:\xammp\htdocs\petkart_project\petkart_project\build-live-chat-system-with-ajax-php-mysql-demo\index.php" class="non-style-link-menu"><div><p class="menu-text">Chat</p></a></div>
-                    </td>
-                </tr>
+                   
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings">
