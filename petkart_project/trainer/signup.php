@@ -64,7 +64,7 @@ if($_POST){
                 </td>
             </tr>
             <tr>
-                <form action="" method="POST" >
+                <form action="" method="POST" autocomplete="off" >
                 <td class="label-td" colspan="2">
                     <label for="name" class="form-label">Name: </label>
                 </td>
@@ -89,7 +89,7 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="nic" class="form-label">NIC: </label>
+                    <label for="nic" class="form-label">Licence </label>
                 </td>
             </tr>
             <tr>

@@ -44,7 +44,7 @@
     $stmt->bind_param("s",$useremail);
     $stmt->execute();
     $result = $stmt->get_result();
-    $userfetch=$userrow->fetch_assoc();
+    $userfetch=$result->fetch_assoc();
     $userid= $userfetch["pid"];
     $username=$userfetch["pname"];
 
@@ -148,7 +148,7 @@
                     <td >
                             <form action="" method="post" class="header-search">
 
-                                        <input type="search" name="search" class="input-text header-searchbar" placeholder="Search trainer name or Email or Date (YYYY-MM-DD)" list="trainers" value="<?php  echo $insertkey ?>">&nbsp;&nbsp;
+                                        <input type="search" name="search" class="input-text header-searchbar" placeholder="Search trainer name or Email or Date (YYYY-MM-DD)" list="trainer" value="<?php  echo $insertkey ?>">&nbsp;&nbsp;
                                         
                                         <?php
                                             echo '<datalist id="trainers">';

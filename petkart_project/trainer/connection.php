@@ -1,6 +1,6 @@
 <?php
 
-    $database= new mysqli("localhost","root","","trainer");
+    $database= new mysqli("localhost","root","","trainers");
     if ($database->connect_error){
         die("Connection failed:  ".$database->connect_error);
     }

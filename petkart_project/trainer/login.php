@@ -10,10 +10,13 @@
         
     <title>Login</title>
 
-    
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     
 </head>
 <body>
+
+
     <?php
 
     //learn from w3schools.com
@@ -43,7 +46,7 @@
         $email=$_POST['useremail'];
         $password=$_POST['userpassword'];
         
-        $error='<label for="promter" class="form-label"></label>';
+        $error='<label for="promter" class="form-label" autocomplete="off" ></label>';
 
         $result= $database->query("select * from webuser where email='$email'");
         if($result->num_rows==1){
@@ -133,7 +136,7 @@
                 </td>
             </tr>
             <tr>
-                <form action="" method="POST" >
+                <form action="" method="POST" autocomplete="off">
                 <td class="label-td">
                     <label for="useremail" class="form-label">Email: </label>
                 </td>
@@ -161,13 +164,16 @@
                 <?php echo $error ?>
                 </td>
             </tr>
-
+            <tr><td> <div class="form-group">
+            <div class="g-recaptcha" data-sitekey="6LelLbkkAAAAAOAUrdhNF7GTburn4LtaA3Ig01r_"></div>
+            </div></td></tr>   
             <tr>
                 <td>
                     <input type="submit" value="Login" class="login-btn btn-primary btn">
                 </td>
             </tr>
         </div>
+
             <tr>
                 <td>
                     <br>
@@ -177,9 +183,7 @@
                 </td>
             </tr>
                         
-                        
-    
-                        
+            
                     </form>
         </table>
 
@@ -187,3 +191,13 @@
 </center>
 </body>
 </html>
+<script>
+    $(document).on('click','login',function(){
+        var response =grecaptcha.getResponse();
+        if(response.length=0)
+        {
+            alert("please verify you are not a robot");
+            return false;
+        }
+    });
+</script>

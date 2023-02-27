@@ -97,9 +97,15 @@
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-userss">
-                        <a href="userss.php" class="non-style-link-menu"><div><p class="menu-text">My userss</p></a></div>
+                    <td class="menu-btn menu-icon-user">
+                        <a href="user.php" class="non-style-link-menu"><div><p class="menu-text">My user</p></a></div>
                     </td>
+                    <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-settings">
+                        <a href="petkart_project\build-live-chat-system-with-ajax-php-mysql-demo\index.php" class="non-style-link-menu"><div><p class="menu-text">Chat</p></a></div>
+                    </td>
+                </tr>
+                
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings">
@@ -133,7 +139,7 @@
                                 echo $today;
 
 
-                                $userssrow = $database->query("select  * from  userss;");
+                                $userrow = $database->query("select  * from  users;");
                                 $trainerrow = $database->query("select  * from  trainer;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
@@ -158,7 +164,7 @@
                             <h3>Welcome!</h3>
                             <h1><?php echo $usersname  ?>.</h1>
                             <p>Thanks for joinnig with us. We are always trying to get you a complete service<br>
-                            You can view your dailly schedule, Reach userss Appointment at home!<br><br>
+                            You can view your dailly schedule, Reach user Appointment at home!<br><br>
                             </p>
                             <a href="appointment.php" class="non-style-link"><button class="btn-primary btn" style="width:30%">View My Appointments</button></a>
                             <br>
@@ -206,13 +212,13 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $userssrow->num_rows  ?>
+                                                                    <?php    echo $userrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
-                                                                    All userss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    All user &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/userss-hover.svg');"></div>
+                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/user-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 </tr>

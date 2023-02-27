@@ -75,7 +75,7 @@
                 </tr>
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-trainer ">
-                        <a href="trainer.php" class="non-style-link-menu "><div><p class="menu-text">trainer</p></a></div>
+                        <a href="trainers.php" class="non-style-link-menu "><div><p class="menu-text">trainer</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
@@ -102,7 +102,7 @@
                             
                             <td colspan="2" class="nav-bar" >
                                 
-                                <form action="trainer.php" method="post" class="header-search">
+                                <form action="trainers.php" method="post" class="header-search">
         
                                     <input type="search" name="search" class="input-text header-searchbar" placeholder="Search trainer name or Email" list="trainer">&nbsp;&nbsp;
                                     

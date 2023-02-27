@@ -53,7 +53,7 @@
                                 </td>
                                 <td style="padding:0px;margin:0px;">
                                     <p class="profile-title">Administrator</p>
-                                    <p class="profile-subtitle">admin@edoc.com</p>
+                                    <p class="profile-subtitle">admin@gmail.com</p>
                                 </td>
                             </tr>
                             <tr>
@@ -72,7 +72,7 @@
                 </tr>
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-trainer ">
-                        <a href="trainer.php" class="non-style-link-menu "><div><p class="menu-text">trainer</p></a></div>
+                        <a href="trainers.php" class="non-style-link-menu "><div><p class="menu-text">trainer</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >

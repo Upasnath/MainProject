@@ -56,7 +56,7 @@
                 $error='1';
             }else{
 
-                $sql1="insert into doctor(docemail,docname,docpassword,docnic,doctel,specialties) values('$email','$name','$password','$nic','$tele',$spec);";
+                $sql1="insert into trainer(docemail,docname,docpassword,docnic,doctel,specialties) values('$email','$name','$password','$nic','$tele',$spec);";
                 $sql2="insert into webuser values('$email','d')";
                 $database->query($sql1);
                 $database->query($sql2);
@@ -80,7 +80,7 @@
     }
     
 
-    header("location: trainer.php?action=add&error=".$error);
+    header("location: trainers.php?action=add&error=".$error);
     ?>
     
    

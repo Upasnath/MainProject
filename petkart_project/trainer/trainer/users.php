@@ -45,7 +45,7 @@
     //import database
     include("../connection.php");
 
-    $sqlmain= "select * from patient where pemail=?";
+    $sqlmain= "select * from users where pemail=?";
     $stmt = $database->prepare($sqlmain);
     $stmt->bind_param("s",$useremail);
     $stmt->execute();
@@ -136,7 +136,7 @@
                                 echo $today;
 
 
-                                $patientrow = $database->query("select  * from  patient;");
+                                $usersrow = $database->query("select  * from  users;");
                                 $doctorrow = $database->query("select  * from  doctor;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
@@ -155,7 +155,7 @@
                     <td colspan="4" >
                         
                     <center>
-                    <table class="filter-container doctor-header patient-header" style="border: none;width:95%" border="0" >
+                    <table class="filter-container doctor-header users-header" style="border: none;width:95%" border="0" >
                     <tr>
                         <td >
                             <h3>Welcome!</h3>
@@ -235,7 +235,7 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $patientrow->num_rows  ?>
+                                                                    <?php    echo $usersrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
                                                                     All users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -326,7 +326,7 @@
                                         
                                             <?php
                                             $nextweek=date("Y-m-d",strtotime("+1 week"));
-                                                $sqlmain= "select * from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  where  patient.pid=$userid  and schedule.scheduledate>='$today' order by schedule.scheduledate asc";
+                                                $sqlmain= "select * from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join users on users.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  where  users.pid=$userid  and schedule.scheduledate>='$today' order by schedule.scheduledate asc";
                                                 //echo $sqlmain;
                                                 $result= $database->query($sqlmain);
                 

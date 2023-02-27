@@ -72,7 +72,7 @@
                 </tr>
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-trainer ">
-                        <a href="trainer.php" class="non-style-link-menu "><div><p class="menu-text">trainer</p></a></div>
+                        <a href="trainers.php" class="non-style-link-menu "><div><p class="menu-text">trainer</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
@@ -240,7 +240,7 @@
                   
                 <tr>
                    <td colspan="4">
-                       <center>
+                    <center>
                         <div class="abc scroll">
                         <table width="93%" class="sub-table scrolldown" border="0">
                         <thead>
@@ -361,7 +361,7 @@
 
                         </table>
                         </div>
-                        </center>
+                    </center>
                    </td> 
                 </tr>
                        
