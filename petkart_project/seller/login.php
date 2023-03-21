@@ -27,8 +27,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery2.0.3.min.js"></script>
 </head>
 <body>
+
+                
+                
 <div class="log-w3">
 <div class="w3layouts-main">
+<a href="http://localhost/petkart_project/petkart_project/" ><button type="button">Home!</button>
 	<h2>Sign In Now</h2>
 		<form action="myphp.php" method="post">
 			<input type="email" class="ggg" name="Email" placeholder="E-MAIL" required="">

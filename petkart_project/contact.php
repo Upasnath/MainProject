@@ -2,12 +2,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Elite Shoppy an Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Contact :: w3layouts</title>
+<title>Pet_Kart</title>
 <!--/tags -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--//tags -->
@@ -129,28 +126,28 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="agile_inner_drop_nav_info">
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.php">Clothing</a></li>
-											<li><a href="womens.php">Wallets</a></li>
-											<li><a href="womens.php">Footwear</a></li>
-											<li><a href="womens.php">Watches</a></li>
-											<li><a href="womens.php">Accessories</a></li>
-											<li><a href="womens.php">Bags</a></li>
-											<li><a href="womens.php">Caps & Hats</a></li>
+											<li><a href="cart.php">Clothing</a></li>
+											<li><a href="cart.php">Wallets</a></li>
+											<li><a href="cart.php">Footwear</a></li>
+											<li><a href="cart.php">Watches</a></li>
+											<li><a href="cart.php">Accessories</a></li>
+											<li><a href="cart.php">Bags</a></li>
+											<li><a href="cart.php">Caps & Hats</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.php">Jewellery</a></li>
-											<li><a href="womens.php">Sunglasses</a></li>
-											<li><a href="womens.php">Perfumes</a></li>
-											<li><a href="womens.php">Beauty</a></li>
-											<li><a href="womens.php">Shirts</a></li>
-											<li><a href="womens.php">Sunglasses</a></li>
-											<li><a href="womens.php">Swimwear</a></li>
+											<li><a href="cart.php">Jewellery</a></li>
+											<li><a href="cart.php">Sunglasses</a></li>
+											<li><a href="cart.php">Perfumes</a></li>
+											<li><a href="cart.php">Beauty</a></li>
+											<li><a href="cart.php">Shirts</a></li>
+											<li><a href="cart.php">Sunglasses</a></li>
+											<li><a href="cart.php">Swimwear</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="womens.php"><img src="images/top1.jpg" alt=" "/></a>
+										<a href="cart.php"><img src="images/top1.jpg" alt=" "/></a>
 									</div>
 									<div class="clearfix"></div>
 								</div>

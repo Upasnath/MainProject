@@ -89,7 +89,7 @@
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-users">
-                        <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">users</p></a></div>
+                    <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">users</p></a></div>
                     </td>
                 </tr>
 

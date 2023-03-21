@@ -129,7 +129,7 @@ include"nav.php";
 		</div>
 		<div class="col-md-8 single-right-left simpleCart_shelfItem">
 					<h3><?=$sub_name?></h3>
-					<p><span class="item_price"><?=$price?> INR</span> </p>
+					<p><span class="item_price"><?=$price?> ₹ </span> </p>
 					<div class="rating1">
 						<span class="starRating">
 							<input id="rating5" type="radio" name="rating" value="5">
@@ -315,7 +315,7 @@ include"nav.php";
 									<div class="item-info-product ">
 										<h4><a href="single.php"><?=$sub_name?></a></h4>
 										<div class="info-product-price">
-												<span class="item_price"><?=$price?> INR</span>
+												<span class="item_price"><?=$price?> ₹ </span>
 											</div>
 										<?php
 											if($status!=1)

@@ -52,7 +52,7 @@
 									<div class="item-info-product ">
 										<h4><a href="single.php?id=<?=$pet_id?>"><?=$sub_name?></a></h4>
 										<div class="info-product-price">
-											<span class="item_price"><?=$price?> INR</span>
+											<span class="item_price"><?=$price?> ₹ </span>
 											</div>
 											<?php
 											if($status!=1)
@@ -70,7 +70,7 @@
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																<?php
-																	if(isset($_SESSION['login']))
+																	if(isset($SESSION['login']))
 																	{
 																	?>
 																	<input type="submit" name="submit" disabled value="Add to cart" class="btn btn-danger"   class="button" />
@@ -88,13 +88,13 @@
 																<fieldset>
 																	
 																	<input type="hidden" name="sub_cat" value="<?=$sub_name?>" />
-																	<input type="hidden" name="userid" value="<?=$_SESSION['userid']; ?>" />
+																	<input type="hidden" name="userid" value="<?=$SESSION['userid']; ?>" />
 																	<input type="hidden" name="petid" value="<?=$pet_id?>"/>
 																	<input type="hidden" name="currency_code" value="IND" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																<?php
-																	if(isset($_SESSION['login']))
+																	if(isset($SESSION['login']))
 																	{
 																	?>
 																	<input type="submit" name="submit" value="Add to cart" class="btn btn-success" class="button" />
@@ -161,7 +161,7 @@
 									<div class="item-info-product ">
 										<h4><a href="single.php?id=<?=$pet_id?>"><?=$sub_name?></a></h4>
 										<div class="info-product-price">
-											<span class="item_price"><?=$price?> INR</span>
+											<span class="item_price"><?=$price?> ₹ </span>
 											</div>
 										<?php
 											if($status!=1)
@@ -179,7 +179,7 @@
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<?php
-																	if(isset($_SESSION['login']))
+																	if(isset($SESSION['login']))
 																	{
 																	?>
 																	<input type="submit" name="submit" disabled value="Add to cart" class="btn btn-danger"   class="button" />
@@ -196,13 +196,13 @@
 																<fieldset>
 																	
 																	<input type="hidden" name="sub_cat" value="<?=$sub_name?>" />
-																	<input type="hidden" name="userid" value="<?=$_SESSION['userid']; ?>" />
+																	<input type="hidden" name="userid" value="<?=$SESSION['userid']; ?>" />
 																	<input type="hidden" name="petid" value="<?=$pet_id?>"/>
 																	<input type="hidden" name="currency_code" value="IND" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																<?php
-																	if(isset($_SESSION['login']))
+																	if(isset($SESSION['login']))
 																	{
 																	?>
 																	<input type="submit" name="submit" value="Add to cart" class="btn btn-success" class="button" />
@@ -272,7 +272,7 @@
 									<div class="item-info-product ">
 										<h4><a href="single.php?id=<?=$pet_id?>"><?=$sub_name?></a></h4>
 										<div class="info-product-price">
-											<span class="item_price"><?=$price?> INR</span>
+											<span class="item_price"><?=$price?> ₹ </span>
 											</div>
 										<?php
 											if($status!=1)
@@ -290,7 +290,7 @@
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<?php
-																	if(isset($_SESSION['login']))
+																	if(isset($SESSION['login']))
 																	{
 																	?>
 																	<input type="submit" name="submit" disabled value="Add to cart" class="btn btn-danger"   class="button" />
@@ -307,13 +307,13 @@
 																<fieldset>
 																	
 																	<input type="hidden" name="sub_cat" value="<?=$sub_name?>" />
-																	<input type="hidden" name="userid" value="<?=$_SESSION['userid']; ?>" />
+																	<input type="hidden" name="userid" value="<?=$SESSION['userid']; ?>" />
 																	<input type="hidden" name="petid" value="<?=$pet_id?>"/>
 																	<input type="hidden" name="currency_code" value="IND" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<?php
-																	if(isset($_SESSION['login']))
+																	if(isset($SESSION['login']))
 																	{
 																	?>
 																	<input type="submit" name="submit" value="Add to cart" class="btn btn-success" class="button" />
@@ -383,7 +383,7 @@
 									<div class="item-info-product ">
 										<h4><a href="single.php?id=<?=$pet_id?>"><?=$sub_name?></a></h4>
 										<div class="info-product-price">
-										<span class="item_price"><?=$price?> INR</span>
+										<span class="item_price"><?=$price?> ₹ </span>
 										</div>
 										<?php
 											if($status!=1)
@@ -401,7 +401,7 @@
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<?php
-																	if(isset($_SESSION['login']))
+																	if(isset($SESSION['login']))
 																	{
 																	?>
 																	<input type="submit" name="submit" disabled value="Add to cart" class="btn btn-danger"   class="button" />
@@ -419,13 +419,13 @@
 																<fieldset>
 																	
 																	<input type="hidden" name="sub_cat" value="<?=$sub_name?>" />
-																	<input type="hidden" name="userid" value="<?=$_SESSION['userid']; ?>" />
+																	<input type="hidden" name="userid" value="<?=$SESSION['userid']; ?>" />
 																	<input type="hidden" name="petid" value="<?=$pet_id?>"/>
 																	<input type="hidden" name="currency_code" value="IND" />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<?php
-																	if(isset($_SESSION['login']))
+																	if(isset($SESSION['login']))
 																	{
 																	?>
 																	<input type="submit" name="submit" value="Add to cart" class="btn btn-success" class="button" />

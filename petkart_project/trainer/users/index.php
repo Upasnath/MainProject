@@ -41,7 +41,7 @@
     //learn from w3schools.com
 
     session_start();
-
+    $user=$_SESSION["user"];
     if(isset($_SESSION["user"])){
         if(($_SESSION["user"])=="" or $_SESSION['usertype']!='p'){
             header("location: ../login.php");
@@ -89,7 +89,9 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                    <a href="../logout.php?username=<?php echo $user?>" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn">
+                                    
+                                    </a>
                                 </td>
                             </tr>
                     </table>
@@ -110,6 +112,12 @@
                     <td class="menu-btn menu-icon-session">
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Scheduled Sessions</p></div></a>
                     </td>
+                    <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-appoinment">
+                        <a href="http://localhost/petkart_project/petkart_project/trainer/chat/real_chat/" class="non-style-link-menu"><div><p class="menu-text">Chat</p></a></div>
+                    </td>
+                   
+                </tr>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-appoinment">
@@ -251,10 +259,10 @@
                                                                     <?php    echo $usersrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
-                                                                    All userss &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    All users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/userss-hover.svg');"></div>
+                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/users-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 </tr>
@@ -303,7 +311,6 @@
                                 <td>
 
 
-                            
                                     <p style="font-size: 20px;font-weight:600;padding-left: 40px;" class="anime">Your Upcoming Booking</p>
                                     <center>
                                         <div class="abc scroll" style="height: 250px;padding: 0;margin: 0;">

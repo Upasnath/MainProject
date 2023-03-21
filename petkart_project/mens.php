@@ -11,7 +11,7 @@ include"dbconfig.php";
 <meta name="keywords" content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
+		function hideURLbar(){ w₹ ow.scrollTo(0,1); } </script>
 <!--//tags -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!-- header-bot -->
 			<div class="col-md-4 logo_agile">
-				<h1><a href="index.php"><span>Pet</span>Kart <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+				<h1><a href="₹ ex.php"><span>Pet</span>Kart <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
 			</div>
         <!-- header-bot -->
 		<div class="col-md-4 agileits-social top_content">
@@ -182,7 +182,7 @@ include"nav.php";
 									<div class="item-info-product ">
 									<h4><a href="single.php?id=<?=$pet_id?>"><?=$sub_name?></a></h4>
 											<div class="info-product-price">
-<span class="item_price"><?=$price?> INR</span>
+<span class="item_price"><?=$price?> ₹ </span>
 										</div>
 															<form action="myphp.php" method="post">
 																<fieldset>
@@ -190,7 +190,7 @@ include"nav.php";
 																	<input type="hidden" name="sub_cat" value="<?=$sub_name?>" />
 																	<input type="hidden" name="userid" value="<?=$_SESSION['userid']; ?>" />
 																	<input type="hidden" name="petid" value="<?=$pet_id?>"/>
-																	<input type="hidden" name="currency_code" value="IND" />
+																	<input type="hidden" name="currency_code" value="₹ " />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<?php
@@ -245,7 +245,7 @@ include"nav.php";
 									<div class="item-info-product ">
 										<h4><a href="single.php?id=<?=$pet_id?>"><?=$sub_name?></a></h4>
 								<div class="info-product-price">
-											<span class="item_price"><?=$price?> INR</span>
+											<span class="item_price"><?=$price?> ₹ </span>
 											<del>$69.71</del>
 										</div>
 										<form action="myphp.php" method="post">
@@ -254,7 +254,7 @@ include"nav.php";
 																	<input type="hidden" name="sub_cat" value="<?=$sub_name?>" />
 																	<input type="hidden" name="userid" value="<?=$_SESSION['userid']; ?>" />
 																	<input type="hidden" name="petid" value="<?=$pet_id?>"/>
-																	<input type="hidden" name="currency_code" value="IND" />
+																	<input type="hidden" name="currency_code" value="₹ " />
 																	<input type="hidden" name="return" value=" " />
 																	<input type="hidden" name="cancel_return" value=" " />
 																	<?php
@@ -299,7 +299,7 @@ include"footer.php";
 <!-- //footer -->
 
 <!-- login -->
-			<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+			<div class="modal fade" id="myModal4" tab₹ ex="-1" role="dialog" aria-labelledby="myModalLabel">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content modal-info">
 						<div class="modal-header">
@@ -367,7 +367,7 @@ include"footer.php";
 <!-- //js -->
 <script src="js/responsiveslides.min.js"></script>
 				<script>
-						// You can also use "$(window).load(function() {"
+						// You can also use "$(w₹ ow).load(function() {"
 						$(function () {
 						 // Slideshow 4
 						$("#slider3").responsiveSlides({
@@ -395,7 +395,7 @@ include"footer.php";
 		action: '#'
 	});
 
-	if (~window.location.search.indexOf('reset=true')) {
+	if (~w₹ ow.location.search.₹ exOf('reset=true')) {
 		paypal.minicart.reset();
 	}
 </script>
@@ -403,7 +403,7 @@ include"footer.php";
 	<!-- //cart-js --> 
 	<!---->
 							<script type='text/javascript'>//<![CDATA[ 
-							$(window).load(function(){
+							$(w₹ ow).load(function(){
 							 $( "#slider-range" ).slider({
 										range: true,
 										min: 0,

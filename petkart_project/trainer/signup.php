@@ -58,6 +58,7 @@ if($_POST){
     <div class="container">
         <table border="0">
             <tr>
+
                 <td colspan="2">
                     <p class="header-text">Let's Get Started</p>
                     <p class="sub-text">Add Your Personal Details to Continue</p>
@@ -119,7 +120,9 @@ if($_POST){
                 <td>
                     <input type="submit" value="Next" class="login-btn btn-primary btn">
                 </td>
-
+                <tr>
+                <td>
+            <a href="http://localhost/petkart_project/petkart_project/" ><button type="button">Home!</button></td>
             </tr>
             <tr>
                 <td colspan="2">

@@ -54,14 +54,18 @@
             if ($utype=='p'){
                 //TODO
                 $checker = $database->query("select * from users where pemail='$email' and ppassword='$password'");
-                if ($checker->num_rows==1){
+                if ($checker->num_rows==1)
+                {
 
 
                     //  users dashbord
                     $_SESSION['user']=$email;
                     $_SESSION['usertype']='p';
-                    
-                    header('location: users/index.php');
+                    $sql="UPDATE `users` SET `status`='Active' WHERE pemail='$email' and ppassword='$password'";
+                    if($result=mysqli_query($database,$sql))
+                    {
+                        header('location: users/index.php');
+                    }
 
                 }else{
                     $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
@@ -93,7 +97,11 @@
                     //   trainer dashbord
                     $_SESSION['user']=$email;
                     $_SESSION['usertype']='d';
-                    header('location: trainer/index.php');
+                    $sql="UPDATE `trainer` SET `status`='Active' WHERE docemail='$email' and docpassword='$password'";
+                    if($result=mysqli_query($database,$sql))
+                    {
+                        header('location: trainer/index.php');
+                    }
 
                 }else{
                     $error='<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Wrong credentials: Invalid email or password</label>';
@@ -124,26 +132,27 @@
     <center>
     <div class="container">
         <table border="0" style="margin: 0;padding: 0;width: 60%;">
+        
             <tr>
                 <td>
                     <p class="header-text">Welcome Back!</p>
                 </td>
             </tr>
-        <div class="form-body">
+        <div class="form-body" >
             <tr>
                 <td>
                     <p class="sub-text">Login with your details to continue</p>
                 </td>
             </tr>
             <tr>
-                <form action="" method="POST" autocomplete="off">
+            <form action="login.php" method="post">
                 <td class="label-td">
                     <label for="useremail" class="form-label">Email: </label>
                 </td>
             </tr>
             <tr>
                 <td class="label-td">
-                    <input type="email" name="useremail" class="input-text" placeholder="Email Address" required>
+                    <input type="email" name="useremail" autocomplete="off" class="input-text" placeholder="Email Address" required  autocomplete="off">
                 </td>
             </tr>
             <tr>
@@ -154,7 +163,7 @@
 
             <tr>
                 <td class="label-td">
-                    <input type="Password" name="userpassword" class="input-text" placeholder="Password" required>
+                    <input type="Password" name="userpassword" autocomplete="off" class="input-text" placeholder="Password" required autocomplete="off" >
                 </td>
             </tr>
 
@@ -180,6 +189,11 @@
                     <label for="" class="sub-text" style="font-weight: 280;">Don't have an account&#63; </label>
                     <a href="signup.php" class="hover-link1 non-style-link">Sign Up</a>
                     <br><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                <a href="http://localhost/petkart_project/petkart_project/" ><button type="button">Home!</button>
                 </td>
             </tr>
                         

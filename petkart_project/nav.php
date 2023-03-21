@@ -61,7 +61,7 @@
 									</div>
 									
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="womens.php"><img src="images/ab3.jpg" alt=" "/></a>
+										<a href="cart.php"><img src="images/ab3.jpg" alt=" "/></a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -87,7 +87,7 @@
 									</div>
 									
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="womens.php"><img src="images/reb.jpg" alt=" "/></a>
+										<a href="cart.php"><img src="images/reb.jpg" alt=" "/></a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -113,7 +113,7 @@
 									</div>
 									
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="womens.php"><img src="images/bir.jpg" alt=" "/></a>
+										<a href="cart.php"><img src="images/bir.jpg" alt=" "/></a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -139,7 +139,7 @@
 									</div>
 									
 									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="womens.php"><img src="images/chu.jpeg" alt=" "/></a>
+										<a href="cart.php"><img src="images/chu.jpeg" alt=" "/></a>
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -158,7 +158,7 @@
 			<div class="wthreecartaits wthreecartaits2 cart cart box_1"> 
 						<input type="hidden" name="cmd" value="_cart">
 						<input type="hidden" name="display" value="1">
-						<a href="womens.php"><button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+						<a href="cart.php"><button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
 						<?php
 						$i=select("SELECT * FROM `addcart` WHERE `userid`='".$_SESSION['userid']."'  ");
 						$o=mysqli_num_rows($i);
