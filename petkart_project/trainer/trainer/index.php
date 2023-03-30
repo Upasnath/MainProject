@@ -95,6 +95,11 @@
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Appointments</p></a></div>
                     </td>
                 </tr>
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-session">
+                        <a href="add-session.php" class="non-style-link-menu"><div><p class="menu-text">Add Sessions</p></div></a>
+                    </td>
+                </tr>
                 
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-session">

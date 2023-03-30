@@ -246,7 +246,7 @@ include"nav.php";
 										<h4><a href="single.php?id=<?=$pet_id?>"><?=$sub_name?></a></h4>
 								<div class="info-product-price">
 											<span class="item_price"><?=$price?> ₹ </span>
-											<del>$69.71</del>
+											
 										</div>
 										<form action="myphp.php" method="post">
 																<fieldset>

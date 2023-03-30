@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <th data-breakpoints="xs">Price </th>
             <th data-breakpoints="xs">Description</th>
             <th data-breakpoints="xs">Image</th>
-            <th>Delete</th>
+            <th>sell</th>
              </tr>
         </thead>
         <tbody>
@@ -107,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <td><?=ucwords($description)?></td>
             <td><img src="images/<?=$image?>" style="height:40px"></td>
             
-            <td><a href="expence_delete.php?id=<?=$r[0]?>" style="color:white"><button class="btn btn-danger">Delete</a></button></td>
+            <td><a href="expence_delete.php?id=<?=$r[0]?>" style="color:white"><button class="btn btn-danger">Sell</a></button></td>
             
           </tr>
           <?php

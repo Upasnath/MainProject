@@ -1,6 +1,7 @@
 
 
 
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
 			<div class="modal-dialog">
 				<!-- Modal content-->
@@ -24,19 +25,51 @@
 							</div> 
 							<input type="submit" name="login" value="Sign In">
 						</form>
-						  <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
-															<li><a href="#" class="facebook">
-																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter"> 
-																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
-																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="pinterest">
-																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+						<style>.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.blue {
+  background-color: #3c80f6;
+}
+
+.green {
+  background-color: #3fa35d;
+}
+
+.pink {
+  background-color: #f0478b;
+}
+
+.button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+</style>
+						  <ul> <div class="button-container">
+						  <a href="admin\index.php"><button class="button blue">Admin</button>
+						  <a href="seller\index.php"><button class="button green">Seller</button>
+						  <a href="trainer\index.html"><button class="button pink">Trainer</button>
+</div>
+
+
 														</ul>
 														<div class="clearfix"></div>
 														<p><a href="#" data-toggle="modal" data-target="#myModal2" > Don't have an account?</a></p>
@@ -73,7 +106,6 @@
 		
 		$_SESSION['userid']=$user_reg_id;
 		$_SESSION['name']=$name;
-		//$_SESSION['image']=$image;
 		$_SESSION['login']="yes";
 		
 		//echo"1";
@@ -120,16 +152,18 @@
 								<label>Confirm Password</label>
 								<span></span>
 							</div> 
+							
 							<input type="submit" name="signup" value="Sign Up">
 						</form>
 						  <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
-															<li><a href="#" class="facebook">
+					
+															<li><a href="https://www.facebook.com/" class="facebook">
 																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter"> 
+															<li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" class="twitter"> 
 																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
+															<li><a href="https://www.instagram.com/" class="instagram">
 																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
 															<li><a href="#" class="pinterest">
@@ -149,7 +183,7 @@
 				<!-- //Modal content-->
 			</div>
 		</div>
-		
+		<script src="js/signup.js"></script>
 
 		 <?php
 		if(isset($_REQUEST['signup']))
@@ -167,6 +201,7 @@
 			else
 			{
 				echo'<script>alert("Something Wrong Try Again ")</script>';
+
 			}
 		}
 		else{

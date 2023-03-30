@@ -13,12 +13,12 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                <!--<li>
-                    <a class="active" href="income.php">
+                <!-- <li>
+                    <a class="active" href="search_result.php">
                         <i class="fa fa-dashboard"></i>
                         <span>Income</span>
                     </a>
-                </li>-->
+                </li> -->
 				
 				<li>
                     <a class="active" href="add_item.php">
@@ -35,6 +35,12 @@
                     <a class="active" href="view_placed.php">
                         <i class="fa fa-book"></i>
                         <span> PLACED  ENQUIRY</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="active" href="http://localhost/petkart_project/petkart_project/seller/petkart_project/seller/cart.php">
+                        <i class="fa fa-book"></i>
+                        <span> view order</span>
                     </a>
                 </li>
 				<li>

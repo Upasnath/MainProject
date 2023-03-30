@@ -92,6 +92,7 @@ else
                       <th>Name</th>
                       <th>Mobile</th>
                       <th>Email</th>
+                      <th>review</th>
                       
                       
                       
@@ -113,6 +114,7 @@ else
                       <td><?=$r['name']?></td>
                       <td><?=$r['mobile']?></td>
                       <td><?=$r['email']?></td>
+                      <td><a href="seller_analysis.php?seller_id=<?php echo $r['seller_id']; ?>">review</a></td>
                       </tr>
                     <?php
 					$p++;

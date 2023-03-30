@@ -6,6 +6,8 @@ include"dbconfig.php";
 <head>
 <title>PetKart online pets buying and selling</title>
 <!--/tags -->
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Elite Shoppy Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
@@ -30,74 +32,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<?php
 		if(isset($_SESSION['login']))
 		{
-		?><li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Welcome <?=$_SESSION['name']; ?> </a></li>
+		?><li> <a href="index.php" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Welcome <?=$_SESSION['name']; ?> </a></li>
 		<li> <a href="logout.php" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Logout </a></li>
 
 		   <li><i class="fa fa-phone" aria-hidden="true"></i> Call : 01234567898</li>
 			<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@example.com</a></li>
+			
+
 		<?php
 		}
 		else
 		{
 ?>		
-<style>
-/* Style The Dropdown Button */
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-  background-color: #3e8e41;
-}
-</style>
-
-<div class="dropdown">
-  <button class="dropbtn">Admin$Seller login</button>
-  <div class="dropdown-content">
-    <a href="admin\index.php">Admin</a>
-    <a href="seller\index.php">Seller</a>
-	<a href="trainer\index.html">Trainer</a>
-    
-  </div>
-</div>
 
  <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
 			<li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up </a></li>
@@ -128,20 +74,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-4 agileits-social top_content">
 						<ul class="social-nav model-3d-0 footer-social w3_agile_social">
 						                                   <li class="share">Share On : </li>
-															<li><a href="#" class="facebook">
+														
+															<li><a href="https://www.facebook.com/" class="facebook">
 																  <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="twitter"> 
+															<li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D" class="twitter"> 
 																  <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-															<li><a href="#" class="instagram">
+															<li><a href="https://www.instagram.com/" class="instagram">
 																  <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
 															<li><a href="#" class="pinterest">
 																  <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
 																  <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
 														</ul>
-
+														
 
 
 		</div>
