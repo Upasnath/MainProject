@@ -72,11 +72,7 @@
                                     <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <a href="logout.php?username=<?php echo $useremail ?>" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
-                                </td>
-                            </tr>
+                            
                     </table>
                     </td>
                 </tr>
@@ -97,25 +93,26 @@
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-session">
-                        <a href="add-session.php" class="non-style-link-menu"><div><p class="menu-text">Add Sessions</p></div></a>
+                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Add Sessions</p></div></a>
                     </td>
                 </tr>
                 
-                <tr class="menu-row" >
+                <!-- <tr class="menu-row" >
                     <td class="menu-btn menu-icon-session">
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">My Sessions</p></div></a>
                     </td>
-                </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-users">
-                        <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">My users</p></a></div>
-                    </td>
-                </tr> 
+                </tr> -->
+                  
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings">
                         <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
                     </td>
                 </tr>
+                <tr>
+                                <td colspan="2">
+                                    <a href="logout.php?username=<?php echo $useremail ?>" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                </td>
+                            </tr>
                 
             </table>
         </div>
@@ -143,7 +140,7 @@
                                 echo $today;
 
 
-                                $usersrow = $database->query("select  * from  users;");
+                                $userrow = $database->query("select  * from  users;");
                                 $trainerrow = $database->query("select  * from  trainer;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
@@ -216,7 +213,7 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $usersrow->num_rows  ?>
+                                                                    <?php    echo $userrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
                                                                     All users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

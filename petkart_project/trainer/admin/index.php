@@ -93,6 +93,11 @@
                         <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">users</p></a></div>
                     </td>
                 </tr>
+                <tr>
+                                <td colspan="2">
+                                    <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                </td>
+                            </tr>
             </table>
         </div>
         <div class="dash-body" style="margin-top: 15px">
@@ -139,7 +144,7 @@
                                 echo $today;
 
 
-                                $usersrow = $database->query("select  * from  users;");
+                                $userrow = $database->query("select  * from  users;");
                                 $trainerrow = $database->query("select  * from  trainer;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
@@ -182,7 +187,7 @@
                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                         <div>
                                                 <div class="h1-dashboard">
-                                                    <?php    echo $usersrow->num_rows  ?>
+                                                    <?php    echo $userrow->num_rows  ?>
                                                 </div><br>
                                                 <div class="h3-dashboard">
                                                     users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -79,7 +79,7 @@ else
             <div class="card-header py-3">
               <h6 class="m-0 font-weight-bold text-primary">Cart view</h6>
             </div></br>
-			<a href="add_cat.php"> <button class="btn btn-success col-lg-12">
+			<!-- <a href="add_cat.php"> <button class="btn btn-success col-lg-12"> -->
 			</button></a>
             <div class="card-body">
               <div class="table-responsive">

@@ -56,11 +56,7 @@
                                     <p class="profile-subtitle">admin@gmail.com</p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
-                                </td>
-                            </tr>
+                            
                     </table>
                     </td>
                 
@@ -90,7 +86,11 @@
                         <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">users</p></a></div>
                     </td>
                 </tr>
-
+                <tr>
+                                <td colspan="2">
+                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                </td>
+                            </tr>
             </table>
         </div>
         <div class="dash-body">
@@ -248,7 +248,6 @@
 
                                         <td>
                                         <div style="display:flex;justify-content: center;">
-                                        <a href="?action=edit&id='.$docid.'&error=0" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-edit"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Edit</font></button></a>
                                         &nbsp;&nbsp;&nbsp;
                                         <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
                                        &nbsp;&nbsp;&nbsp;

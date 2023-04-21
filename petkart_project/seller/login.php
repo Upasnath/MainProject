@@ -38,7 +38,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<input type="submit" value="Sign In" name="login">
 		</form>
 		<p>Don't Have an Account ?<a href="registration.php">Create an account</a></p>
-		<a href="http://localhost/petkart_project/petkart_project/" ><button type="button">Home!</button>
+		<p><a href="http://localhost/petkart_project/petkart_project/">Back to Home</a></p>
+		<!-- <a href="http://localhost/petkart_project/petkart_project/" ><button type="button">Home!</button> -->
 </div>
 </div>
 <script src="js/bootstrap.js"></script>

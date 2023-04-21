@@ -56,11 +56,7 @@
                                     <p class="profile-subtitle">admin@gmail.com</p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
-                                </td>
-                            </tr>
+                           
                     </table>
                     </td>
                 
@@ -90,6 +86,11 @@
                         <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">users</p></a></div>
                     </td>
                 </tr>
+                <tr>
+                                <td colspan="2">
+                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                </td>
+                            </tr>
 
             </table>
         </div>

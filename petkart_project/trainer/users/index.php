@@ -157,7 +157,7 @@
                                 echo $today;
 
 
-                                $usersrow = $database->query("select  * from  users;");
+                                $userrow = $database->query("select  * from  users;");
                                 $trainerrow = $database->query("select  * from  trainer;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
@@ -256,7 +256,7 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $usersrow->num_rows  ?>
+                                                                    <?php    echo $userrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
                                                                     All users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

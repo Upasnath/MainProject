@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/login.css">
         
     <title>Login</title>
-
+<script>petkart_project\trainer\js\login.js</script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     
@@ -145,7 +145,7 @@
                 </td>
             </tr>
             <tr>
-            <form action="login.php" method="post">
+            <form action="login.php" method="post" onsubmit="return validateLoginForm()">
                 <td class="label-td">
                     <label for="useremail" class="form-label">Email: </label>
                 </td>
@@ -188,14 +188,15 @@
                     <br>
                     <label for="" class="sub-text" style="font-weight: 280;">Don't have an account&#63; </label>
                     <a href="signup.php" class="hover-link1 non-style-link">Sign Up</a>
+                    <p><a href="http://localhost/petkart_project/petkart_project/trainer/index.html">Back to Home</a></p>
                     <br><br><br>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td>
                 <a href="http://localhost/petkart_project/petkart_project/" ><button type="button">Home!</button>
                 </td>
-            </tr>
+            </tr> -->
                         
             
                     </form>

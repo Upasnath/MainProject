@@ -136,6 +136,7 @@ include"dbconfig.php";
                       <div class="custom-control custom-checkbox small">
                         <input type="checkbox" class="custom-control-input" id="customCheck">
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
+                        <p><a href="http://localhost/petkart_project/petkart_project/">Back to Home</a></p>
                       </div>
                     </div>
                      <input type="submit"  value="Login" name="login" class="btn btn-primary btn-user btn-block">

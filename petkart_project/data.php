@@ -88,7 +88,7 @@
 																<fieldset>
 																	
 																	<input type="hidden" name="sub_cat" value="<?=$sub_name?>" />
-																	<input type="hidden" name="userid" value="<?=$SESSION['userid'];?>" />
+																	<input type="hidden" name="userid" value="<?=$_SESSION['userid'];?>" />
 																	<input type="hidden" name="petid" value="<?=$pet_id?>"/>
 																	<input type="hidden" name="currency_code" value="₹" />
 																	<input type="hidden" name="return" value=" " />

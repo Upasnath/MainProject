@@ -235,7 +235,7 @@
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
                                                         <div>
                                                                 <div class="h1-dashboard">
-                                                                    <?php    echo $usersrow->num_rows  ?>
+                                                                    <?php    echo $userrow->num_rows  ?>
                                                                 </div><br>
                                                                 <div class="h3-dashboard">
                                                                     All users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

@@ -28,7 +28,7 @@
       <div class="card-header">
        <div class="message-to d-flex ">
        <?php 
-          $query  = "SELECT * FROM users WHERE pemail='$receiver'";
+          $query  = "SELECT * FROM `trainer` WHERE docemail='$receiver'";
           $result =$conn->query($query);
           if($result){
           foreach($result as $active_user){ ?>
@@ -40,7 +40,7 @@
                 echo "<i class='fa fa-circle offline'></i>";
             }
           ?>
-          <h6><?php echo $active_user['pemail']; ?></h6>
+          <h6><?php echo $active_user['docemail']; ?></h6>
           <?php 
             if($active_user['status'] == "Active"){
               echo "<p>Active</p>";

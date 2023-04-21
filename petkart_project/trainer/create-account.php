@@ -164,8 +164,10 @@ if($_POST){
             <tr>
                 <td colspan="2">
                     <br>
+                    
                     <label for="" class="sub-text" style="font-weight: 280;">Already have an account&#63; </label>
                     <a href="login.php" class="hover-link1 non-style-link">Login</a>
+                    
                     <br><br><br>
                 </td>
             </tr>

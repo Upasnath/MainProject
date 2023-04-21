@@ -94,6 +94,8 @@ if(isset($_REQUEST['signup']))
 	else
 	{
 		echo"email or password is incorrect";
+		
+		
 	}
 	}
 		

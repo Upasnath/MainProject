@@ -1,6 +1,6 @@
 
 
-
+<script>petkart_project\js\signup.js</script>
 
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
 			<div class="modal-dialog">

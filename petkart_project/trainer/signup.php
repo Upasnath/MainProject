@@ -122,7 +122,7 @@ if($_POST){
                 </td>
                 <tr>
                 <td>
-            <a href="http://localhost/petkart_project/petkart_project/" ><button type="button">Home!</button></td>
+            <!-- <a href="http://localhost/petkart_project/petkart_project/" ><button type="button">Home!</button></td> -->
             </tr>
             <tr>
                 <td colspan="2">
@@ -130,6 +130,7 @@ if($_POST){
                     <label for="" class="sub-text" style="font-weight: 280;">Already have an account&#63; </label>
                     <a href="login.php" class="hover-link1 non-style-link">Login</a>
                     <br><br><br>
+                    <p><a href="http://localhost/petkart_project/petkart_project/trainer/index.html">Back to Home</a></p>
                 </td>
             </tr>
 
