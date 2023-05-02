@@ -87,13 +87,7 @@
                                     <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <a href="../logout.php?username=<?php echo $user?>" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn">
-                                    
-                                    </a>
-                                </td>
-                            </tr>
+                            
                     </table>
                     </td>
                 </tr>
@@ -102,8 +96,8 @@
                         <a href="index.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Home</p></a></div></a>
                     </td>
                 </tr>
-                <tr class="menu-row">
-                    <td class="menu-btn menu-icon-trainer">
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-appoinment">
                         <a href="trainers.php" class="non-style-link-menu"><div><p class="menu-text">All trainers</p></a></div>
                     </td>
                 </tr>
@@ -130,7 +124,13 @@
                         <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
                     </td>
                 </tr>
-                
+                <tr>
+                                <td colspan="2">
+                                    <a href="../logout.php?username=<?php echo $user?>" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn">
+                                    
+                                    </a>
+                                </td>
+                            </tr>
             </table>
         </div>
         <div class="dash-body" style="margin-top: 15px">
@@ -153,7 +153,7 @@
                                     <?php 
                                 date_default_timezone_set('Asia/Kolkata');
         
-                                $today = date('Y-m-d');
+                                $today = date('d-m-Y');
                                 echo $today;
 
 
@@ -249,7 +249,7 @@
                                                                     All trainers &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/trainers-hover.svg');"></div>
+                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/book-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 <td style="width: 25%;">
@@ -262,7 +262,7 @@
                                                                     All users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/users-hover.svg');"></div>
+                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/book-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 </tr>

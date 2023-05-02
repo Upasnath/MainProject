@@ -16,7 +16,7 @@ $tmp_name=$_FILES["myfile"]["tmp_name"];
 $seller_id=$_SESSION['sellerid'];
 	if(move_uploaded_file($tmp_name,"images/$name"))
 	{
-		echo $query="INSERT INTO `pet_info`( `sub_cat_id`, `color`, `image`, `price`, `description`, `seller_id`)
+		 $query="INSERT INTO `pet_info`( `sub_cat_id`, `color`, `image`, `price`, `description`, `seller_id`)
 		VALUES ('$category','$colour','$name','$price','$des','$seller_id')";
 	$n=iud($query);
 	 if($n==1)
@@ -29,12 +29,16 @@ $seller_id=$_SESSION['sellerid'];
 		 }
 		 else
 		 {
-			 echo"efrtuiytiuytyittttttttttttttttttt";
+			echo"<script>alert(' uploaded not successfully');
+		 window.location='view.php';
+		 </script>";
 		 }
 	}
 	else
 	{
-		echo"imagesssssssssssssssss";
+		echo"<script>alert(' uploaded not successfully');
+		 window.location='add_item.php';
+		 </script>";
 	}
 	}
 	

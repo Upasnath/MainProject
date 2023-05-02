@@ -145,7 +145,7 @@ if(isset($_REQUEST['butcut']))
                             <div class="form-group ">
                                         <label for="cname" class="control-label col-lg-3"> COLOUR </label>
                                         <div class="col-lg-6">
-                                            <input class=" form-control" type="text" name="colour" id="expensedate"  required="">
+                                            <input class=" form-control" type="text" name="colour" id="expensedate"  required="enter the item">
                                         </div>
                                     </div>			
 				    <div class="form-group ">
@@ -164,7 +164,7 @@ if(isset($_REQUEST['butcut']))
 <div class="form-group ">
  <label for="ccomment" class="control-label col-lg-3"> IMAGE</label>
  <div class="col-lg-6">
-<input type="file" name = "myfile" id = "image" class="form-control" >
+<input type="file" name = "myfile" id = "image" class="form-control" required="" >
 
 </div>
 </div>
@@ -216,54 +216,7 @@ echo "Successful";
 	
 ?>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
+	
 						
 						
                         
@@ -278,7 +231,43 @@ echo "Successful";
 </section>
 
 <!--main content end-->
+
 </section>
+<script>
+   var selectBox = document.getElementsByName("catid")[0];
+var fileInput = document.getElementById("image");
+
+selectBox.addEventListener("change", checkInputs);
+fileInput.addEventListener("change", checkInputs);
+
+function checkInputs() {
+  if (selectBox.value && fileInput.value) {
+    makePrediction();
+  }
+}
+
+function makePrediction() {
+  var data = new FormData();
+  data.append('catid', selectBox.value);
+  data.append('myfile', fileInput.files[0]);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', '/predict/');
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      var response = JSON.parse(xhr.responseText);
+      alert('The predicted value is ' + response.breed);
+    } else {
+      alert('Request failed. Returned status of ' + xhr.status);
+    }
+  };
+  xhr.send(data);
+}
+
+</script>
+
+
+
 <script src="js/bootstrap.js"></script>
 <script src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/scripts.js"></script>

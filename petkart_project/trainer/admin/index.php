@@ -60,11 +60,11 @@
                                     <p class="profile-subtitle">admin@gmail.com</p>
                                 </td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td colspan="2">
                                     <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
                                 </td>
-                            </tr>
+                            </tr> -->
                     </table>
                     </td>
                 </tr>
@@ -74,7 +74,7 @@
                     </td>
                 </tr>
                 <tr class="menu-row">
-                    <td class="menu-btn menu-icon-trainer ">
+                    <td class="menu-btn menu-icon-appoinment">
                         <a href="trainers.php" class="non-style-link-menu "><div><p class="menu-text">trainer</p></a></div>
                     </td>
                 </tr>
@@ -88,8 +88,8 @@
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Appointment</p></a></div>
                     </td>
                 </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-users">
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-appoinment">
                         <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">users</p></a></div>
                     </td>
                 </tr>
@@ -140,7 +140,7 @@
                                     <?php 
                                 date_default_timezone_set('Asia/Kolkata');
         
-                                $today = date('Y-m-d');
+                                $today = date('d-m-Y');
                                 echo $today;
 
 
@@ -180,8 +180,7 @@
                                                     trainer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </div>
                                         </div>
-                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/trainer-hover.svg');"></div>
-                                    </div>
+                                        <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book.png');"></div>
                                 </td>
                                 <td style="width: 25%;">
                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
@@ -193,7 +192,7 @@
                                                     users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 </div>
                                         </div>
-                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/users-hover.svg');"></div>
+                                        <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
                                     </div>
                                 </td>
                                 <td style="width: 25%;">

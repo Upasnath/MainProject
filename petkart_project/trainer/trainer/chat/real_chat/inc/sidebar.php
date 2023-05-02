@@ -1,4 +1,5 @@
-<div class="sidebar-wrapper mb-4">
+<html><body>
+    <table><div class="sidebar-wrapper mb-4">
     <?php
     session_start();
     $user = $_SESSION['user'];
@@ -62,3 +63,4 @@
        </div>
                         </div>
     </div>
+                        </table></body></html>

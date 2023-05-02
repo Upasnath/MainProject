@@ -1,4 +1,9 @@
-
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
 <head>
 <title>SELLER Plane</title>
@@ -22,12 +27,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery2.0.3.min.js"></script>
 </head>
 <body>
-
-
-                
 <div class="log-w3">
 <div class="w3layouts-main">
-
 	<h2>Sign In Now</h2>
 		<form action="myphp.php" method="post">
 			<input type="email" class="ggg" name="Email" placeholder="E-MAIL" required="">
@@ -38,8 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<input type="submit" value="Sign In" name="login">
 		</form>
 		<p>Don't Have an Account ?<a href="registration.php">Create an account</a></p>
-		<p><a href="http://localhost/petkart_project/petkart_project/">Back to Home</a></p>
-		<!-- <a href="http://localhost/petkart_project/petkart_project/" ><button type="button">Home!</button> -->
+		<p><a href="http://localhost/petkart_project/petkart_project/index.php">Back to home</p>
 </div>
 </div>
 <script src="js/bootstrap.js"></script>

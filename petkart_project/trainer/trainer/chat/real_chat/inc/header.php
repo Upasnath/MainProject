@@ -11,6 +11,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/animations.css">  
+    <link rel="stylesheet" href="../css/main.css">  
+    <link rel="stylesheet" href="../css/admin.css">
+        
+    <title>Dashboard</title>
+    <style>
+        .dashbord-tables,.trainer-heade{
+            animation: transitionIn-Y-over 0.5s;
+        }
+        .filter-container{
+            animation: transitionIn-Y-bottom  0.5s;
+        }
+        .sub-table,#anim{
+            animation: transitionIn-Y-bottom 0.5s;
+        }
+        .trainer-heade{
+            animation: transitionIn-Y-over 0.5s;
+        }
+    </style>
+    
+    
+</head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,6 +58,7 @@
   </head>
 <body>
 <div>
+  
 <a href="http://localhost/petkart_project/petkart_project/trainer/trainer/index.php" type="button" class="btn btn-light">Home</a>
 </div>
 <?php 

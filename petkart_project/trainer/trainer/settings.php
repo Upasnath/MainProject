@@ -71,11 +71,7 @@
                                     <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                    <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
-                                </td>
-                            </tr>
+                            
                     </table>
                     </td>
                 </tr>
@@ -95,17 +91,21 @@
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">My Sessions</p></div></a>
                     </td>
                 </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-users">
+                <!-- <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-patient">
                         <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">My users</p></a></div>
                     </td>
-                </tr>
+                </tr> -->
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings  menu-active menu-icon-settings-active">
                         <a href="settings.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Settings</p></a></div>
                     </td>
                 </tr>
-                
+                <tr>
+                                <td colspan="2">
+                                    <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                </td>
+                            </tr>
             </table>
         </div>
         <div class="dash-body" style="margin-top: 15px">
@@ -114,7 +114,7 @@
                         <tr >
                             
                         <td width="13%" >
-                    <a href="settings.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                    <!-- <a href="settings.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a> -->
                     </td>
                     <td>
                         <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Settings</p>
@@ -129,12 +129,12 @@
                                     <?php 
                                 date_default_timezone_set('Asia/Kolkata');
         
-                                $today = date('Y-m-d');
+                                $today = date('d-m-Y');
                                 echo $today;
 
 
-                                $userrow = $database->query("select  * from  users;");
-                                $trainerrow = $database->query("select  * from  trainer;");
+                                $patientrow = $database->query("select  * from  users;");
+                                $doctorrow = $database->query("select  * from  trainer;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
 
@@ -162,7 +162,7 @@
                                 <td style="width: 25%;">
                                     <a href="?action=edit&id=<?php echo $userid ?>&error=0" class="non-style-link">
                                     <div  class="dashboard-items setting-tabs"  style="padding:20px;margin:auto;width:95%;display: flex">
-                                        <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../img/icons/trainers-hover.svg');"></div>
+                                        <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
                                         <div>
                                                 <div class="h1-dashboard">
                                                     Account Settings  &nbsp;
@@ -210,10 +210,10 @@
                                 </td>
                             </tr>
                             <tr>
-                            <td style="width: 25%;">
+                            <!-- <td style="width: 25%;">
                                     <a href="?action=drop&id=<?php echo $userid.'&name='.$username ?>" class="non-style-link">
                                     <div  class="dashboard-items setting-tabs"  style="padding:20px;margin:auto;width:95%;display: flex;">
-                                        <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../img/icons/users-hover.svg');"></div>
+                                        <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../img/icons/patients-hover.svg');"></div>
                                         <div>
                                                 <div class="h1-dashboard" style="color: #ff5050;">
                                                     Delete Account
@@ -226,7 +226,7 @@
                                                 
                                     </div>
                                     </a>
-                                </td>
+                                </td> -->
                                 
                             </tr>
                         </table>
@@ -255,7 +255,7 @@
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-trainer.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                        <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
                         <a href="settings.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;No&nbsp;&nbsp;</font></button></a>
 
                         </div>
@@ -407,7 +407,7 @@
                                     <tr>
                                         <td>
                                             <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Edit trainer Details.</p>
-                                        trainer ID : '.$id.' (Auto Generated)<br><br>
+                                       trainer ID : '.$id.' (Auto Generated)<br><br>
                                         </td>
                                     </tr>
                                     <tr>
@@ -431,7 +431,7 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="text" name="name" class="input-text" placeholder="trainer Name" value="'.$name.'" required><br>
+                                            <input type="text" name="name" class="input-text" placeholder="Doctor Name" value="'.$name.'" required><br>
                                         </td>
                                         
                                     </tr>

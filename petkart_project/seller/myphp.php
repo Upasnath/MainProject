@@ -81,12 +81,10 @@ if(isset($_REQUEST['signup']))
 		$_SESSION['login']="yes";
 		
 		//echo"1";
-		
+		header("location:index.php");
 	}
 	else
 	{
-		
-		header("location:index.php");
 		echo"email or password is incorrect";
 	}
 	}
@@ -94,7 +92,117 @@ if(isset($_REQUEST['signup']))
 	}
 
 #############################################
+if(isset($_REQUEST['change']))
+	{
+	$userid=$_SESSION['userid'];	
+	$oldpassword=trim($_REQUEST['oldpassword']);
+	$newpassword=trim($_REQUEST['newpassword']);
+	$cpassword=trim($_REQUEST['cpassword']);
+	$valid=true;
+	$query="update user set password='$newpassword' where password='$oldpassword' and userid='$userid'";
+	
+	
+	if(checklength($oldpassword, 12))
+	{
+		echo"invalid old password";
+		$valid=false;
+	}
+	if(checklength($newpassword, 12))
+	{
+		echo"invalid New password";
+		$valid=false;
+	}
+	if($cpassword!=$newpassword)
+	{
+		echo"both password not matched";
+		$valid=false;
+	}
+	if($valid)
+	{
+	$n=iud($query);
+	
+	if($n==1)
+	{		
+       echo"1";
+	}
+	else
+	{
+		echo"something wrong";
+	}
+	}
+		
+	}
 
+#######################################################
+if(isset($_REQUEST['forget']))
+	{
+	$email=trim($_REQUEST['email']);
+
+	$time=time();
+	$otp=md5($email.$time);
+	$valid=true;
+	if(strlen($otp)!=32)
+		{
+			echo "invalid otp";
+			$valid=false;
+		}
+		if(!checkemail($email))
+	{
+		echo"invalid email";
+		$valid=false;
+	}
+	
+	$query="update user set otp='$otp' where email='$email' ";
+	
+if($valid){
+	$n=iud($query);
+if($n==1)
+{
+	echo"1";
+}
+else
+{
+	echo"invalid forget password";
+}
+}
+}
+	
+################################################
+if(isset($_REQUEST['reset']))
+{
+	$otp=trim($_REQUEST['otp']);
+	$newpassword=trim($_REQUEST['newpassword']);
+	$cpassword=trim($_REQUEST['cpassword']);
+	$valid=true;
+	if(strlen($otp)!=32)
+	{
+		echo"invalid otp";
+		$valid=false;
+	}
+	if(checklength($newpassword, 6))
+	{
+		echo"invalid  New password";
+		$valid=false;
+	}
+	if($cpassword!=$newpassword)
+	{
+		echo"Password and Confirm Password is not match";
+		$valid=false;
+	}
+	$query="update user set password='$newpassword',otp='' where otp='$otp'";
+	
+	if($valid)
+	{
+		$n=iud($query);
+	if($n==1)
+	{
+		echo"1";
+	}
+	else
+	{
+		echo "something wrong";
+	}
+	}
 }
 ###########################################################################
 if(isset($_REQUEST['upload']))

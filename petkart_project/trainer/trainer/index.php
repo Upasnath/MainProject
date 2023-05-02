@@ -136,7 +136,7 @@
                                     <?php 
                                 date_default_timezone_set('Asia/Kolkata');
         
-                                $today = date('Y-m-d');
+                                $today = date('d-m-Y');
                                 echo $today;
 
 
@@ -206,7 +206,7 @@
                                                                     All trainers &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/trainers-hover.svg');"></div>
+                                                        <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 <td style="width: 25%;">
@@ -219,7 +219,7 @@
                                                                     All users &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                 </div>
                                                         </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/users-hover.svg');"></div>
+                                                        <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
                                                     </div>
                                                 </td>
                                                 </tr>

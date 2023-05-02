@@ -26,36 +26,46 @@
     
 </head>
 <body>
-    <?php
+<?php
 
-    //learn from w3schools.com
+//learn from w3schools.com
 
-    session_start();
+session_start();
 
-    if(isset($_SESSION["user"])){
-        if(($_SESSION["user"])=="" or $_SESSION['usertype']!='p'){
-            header("location: ../login.php");
-        }else{
-            $useremail=$_SESSION["user"];
-        }
-
-    }else{
+if(isset($_SESSION["user"])){
+    if(($_SESSION["user"])=="" or $_SESSION['usertype']!='p'){
         header("location: ../login.php");
+    }else{
+        $useremail=$_SESSION["user"];
     }
-    
 
-    //import database
-    include("../connection.php");
-    $sqlmain= "select * from users where pemail=?";
-    $stmt = $database->prepare($sqlmain);
-    $stmt->bind_param("s",$useremail);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $userfetch=$result ->fetch_assoc();
-    $userid= $userfetch["pid"];
-    $username=$userfetch["pname"];
+}else{
+    header("location: ../login.php");
+}
 
-    ?>
+
+//import database
+include("../connection.php");
+$sqlmain= "select * from users where pemail=?";
+$stmt = $database->prepare($sqlmain);
+$stmt->bind_param("s",$useremail);
+$stmt->execute();
+$result = $stmt->get_result();
+$userfetch=$result->fetch_assoc();
+$userid= $userfetch["pid"];
+$username=$userfetch["pname"];
+
+
+//echo $userid;
+//echo $username;
+
+date_default_timezone_set('Asia/Kolkata');
+
+$today = date('Y-m-d');
+
+
+//echo $userid;
+?>
     <div class="container">
         <div class="menu">
             <table class="menu-container" border="0">
@@ -71,11 +81,7 @@
                                     <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
-                                </td>
-                            </tr>
+                           
                     </table>
                     </td>
                 
@@ -85,8 +91,8 @@
                         <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Home</p></a></div></a>
                     </td>
                 </tr>
-                <tr class="menu-row">
-                    <td class="menu-btn menu-icon-trainer">
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-appoinment">
                         <a href="trainers.php" class="non-style-link-menu"><div><p class="menu-text">All trainers</p></a></div>
                     </td>
                 </tr>
@@ -106,7 +112,11 @@
                         <a href="settings.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">Settings</p></a></div>
                     </td>
                 </tr>
-                
+                <tr>
+                                <td colspan="2">
+                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                </td>
+                            </tr>
             </table>
         </div>
         <div class="dash-body" style="margin-top: 15px">
@@ -134,8 +144,8 @@
                                 echo $today;
 
 
-                                $patientrow = $database->query("select  * from  patient;");
-                                $trainerrow = $database->query("select  * from  trainer;");
+                                $patientrow = $database->query("select  * from  users;");
+                                $doctorrow = $database->query("select  * from  trainer;");
                                 $appointmentrow = $database->query("select  * from  appointment where appodate>='$today';");
                                 $schedulerow = $database->query("select  * from  schedule where scheduledate='$today';");
 
@@ -163,7 +173,7 @@
                                 <td style="width: 25%;">
                                     <a href="?action=edit&id=<?php echo $userid ?>&error=0" class="non-style-link">
                                     <div  class="dashboard-items setting-tabs"  style="padding:20px;margin:auto;width:95%;display: flex">
-                                        <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../img/icons/trainers-hover.svg');"></div>
+                                        <div class="btn-icon-back dashboard-icons-setting" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
                                         <div>
                                                 <div class="h1-dashboard">
                                                     Account Settings  &nbsp;
@@ -380,7 +390,7 @@
             </div>
             ';
         }elseif($action=='edit'){
-            $sqlmain= "select * from patient where pid=?";
+            $sqlmain= "select * from users where pid=?";
             $stmt = $database->prepare($sqlmain);
             $stmt->bind_param("i", $id);
             $stmt->execute();
@@ -447,7 +457,7 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="text" name="name" class="input-text" placeholder="trainer Name" value="'.$name.'" required><br>
+                                            <input type="text" name="name" class="input-text" placeholder="Doctor Name" value="'.$name.'" required><br>
                                         </td>
                                         
                                     </tr>

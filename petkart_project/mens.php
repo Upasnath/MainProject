@@ -4,7 +4,7 @@ include"dbconfig.php";
 <!DOCTYPE html>
 <html>
 <head>
-<title>PetKart online selling and buying webiste</title>
+<title>PetKart online selling and buying website</title>
 <!--/tags -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -188,7 +188,7 @@ include"nav.php";
 																<fieldset>
 																	
 																	<input type="hidden" name="sub_cat" value="<?=$sub_name?>" />
-																	<input type="hidden" name="userid" value="<?=$_SESSION['userid']; ?>" />
+																	<input type="hidden" name="userid" value="<?=$_zSESSION['userid']; ?>" />
 																	<input type="hidden" name="petid" value="<?=$pet_id?>"/>
 																	<input type="hidden" name="currency_code" value="₹ " />
 																	<input type="hidden" name="return" value=" " />

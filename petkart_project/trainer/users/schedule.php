@@ -74,42 +74,52 @@
                                  <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
                              </td>
                          </tr>
-                         <tr>
-                             <td colspan="2">
-                                 <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
-                             </td>
-                         </tr>
-                 </table>
-                 </td>
-             </tr>
-             <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-home " >
-                        <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Home</p></a></div></a>
+                         </table>
                     </td>
                 </tr>
-                <tr class="menu-row">
-                    <td class="menu-btn menu-icon-trainer">
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-home menu-active menu-icon-home-active" >
+                        <a href="index.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Home</p></a></div></a>
+                    </td>
+                </tr>
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-appoinment">
                         <a href="trainers.php" class="non-style-link-menu"><div><p class="menu-text">All trainers</p></a></div>
                     </td>
                 </tr>
                 
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-session menu-active menu-icon-session-active">
-                        <a href="schedule.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Scheduled Sessions</p></div></a>
+                    <td class="menu-btn menu-icon-session">
+                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Scheduled Sessions</p></div></a>
                     </td>
+                    <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-appoinment">
+                        <a href="http://localhost/petkart_project/petkart_project/trainer/chat/real_chat/" class="non-style-link-menu"><div><p class="menu-text">Chat</p></a></div>
+                    </td>
+                   
+                </tr>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-appoinment">
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Bookings</p></a></div>
                     </td>
+                   
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings">
                         <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
                     </td>
                 </tr>
+                <tr>
+                                <td colspan="2">
+                                    <a href="../logout.php?username=<?php echo $user?>" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn">
+                                    
+                                    </a>
+                                </td>
+                            </tr>
                 
             </table>
+        
         </div>
         <?php
 
@@ -143,7 +153,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td width="13%" >
-                    <a href="schedule.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                    <!-- <a href="schedule.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a> -->
                     </td>
                     <td >
                             <form action="" method="post" class="header-search">

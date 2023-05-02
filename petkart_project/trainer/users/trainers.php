@@ -60,23 +60,17 @@
                                     <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
                                 </td>
                             </tr>
-                            <tr>
-                                <td colspan="2">
-                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
-                                </td>
-                            </tr>
-                    </table>
+                            </table>
                     </td>
-                
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-home " >
-                        <a href="index.php" class="non-style-link-menu "><div><p class="menu-text">Home</p></a></div></a>
+                    <td class="menu-btn menu-icon-home menu-active menu-icon-home-active" >
+                        <a href="index.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Home</p></a></div></a>
                     </td>
                 </tr>
-                <tr class="menu-row">
-                    <td class="menu-btn menu-icon-trainer menu-active menu-icon-trainer-active">
-                        <a href="trainers.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">All trainer</p></a></div>
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-appoinment">
+                        <a href="trainers.php" class="non-style-link-menu"><div><p class="menu-text">All trainers</p></a></div>
                     </td>
                 </tr>
                 
@@ -84,17 +78,31 @@
                     <td class="menu-btn menu-icon-session">
                         <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Scheduled Sessions</p></div></a>
                     </td>
+                    <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-appoinment">
+                        <a href="http://localhost/petkart_project/petkart_project/trainer/chat/real_chat/" class="non-style-link-menu"><div><p class="menu-text">Chat</p></a></div>
+                    </td>
+                   
+                </tr>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-appoinment">
                         <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Bookings</p></a></div>
                     </td>
+                   
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings">
                         <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
                     </td>
                 </tr>
+                <tr>
+                                <td colspan="2">
+                                    <a href="../logout.php?username=<?php echo $user?>" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn">
+                                    
+                                    </a>
+                                </td>
+                            </tr>
                 
             </table>
         </div>

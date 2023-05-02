@@ -58,41 +58,53 @@
                                     <p class="profile-subtitle">admin@gmail.com</p>
                                 </td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td colspan="2">
                                 <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
                                 </td>
-                            </tr>
+                            </tr> -->
                     </table>
                     </td>
                 
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-dashbord" >
-                        <a href="index.php" class="non-style-link-menu"><div><p class="menu-text">Dashboard</p></a></div></a>
-                    </td>
-                </tr>
-                <tr class="menu-row">
-                    <td class="menu-btn menu-icon-trainer menu-active menu-icon-trainer-active">
-                        <a href="trainers.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">trainer</p></a></div>
-                    </td>
-                </tr>
-                <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-schedule">
-                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Schedule</p></div></a>
+                    <td class="menu-btn menu-icon-dashbord menu-active menu-icon-dashbord-active" >
+                        <a href="index.php" class="non-style-link-menu non-style-link-menu-active"><div><p class="menu-text">Dashboard</p></a></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-appoinment">
-                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Appointment</p></a></div>
+                        <a href="chat/real_chat/index.php" class="non-style-link-menu"><div><p class="menu-text">Chat</p></a></div>
+                    </td>
+                </tr>
+                <tr class="menu-row">
+                    <td class="menu-btn menu-icon-appoinment">
+                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Appointments</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
-                    <td class="menu-btn menu-icon-users">
-                    <a href="users.php" class="non-style-link-menu"><div><p class="menu-text">users</p></a></div>
+                    <td class="menu-btn menu-icon-session">
+                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Add Sessions</p></div></a>
                     </td>
                 </tr>
-
+                
+                <!-- <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-session">
+                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">My Sessions</p></div></a>
+                    </td>
+                </tr> -->
+                  
+                <tr class="menu-row" >
+                    <td class="menu-btn menu-icon-settings">
+                        <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
+                    </td>
+                </tr>
+                <tr>
+                                <td colspan="2">
+                                    <a href="logout.php?username=<?php echo $useremail ?>" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                </td>
+                            </tr>
+                
             </table>
         </div>
         <div class="dash-body">
